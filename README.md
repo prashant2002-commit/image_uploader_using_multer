@@ -11,16 +11,15 @@ Generate unique filenames using timestamps
 Server-side rendering with EJS
 Handle multipart/form-data requests
 Simple and clean user interface
+
+
 Tech Stack
 Backend
 Node.js
 Express.js
 Middleware
 Multer
-Frontend
-EJS
-HTML
-CSS
+
 Project Structure
 file-upload-app/
 │
@@ -35,6 +34,9 @@ file-upload-app/
 ├── package-lock.json
 ├── .gitignore
 └── README.md
+
+
+
 How It Works
 User selects a file from the browser.
 Form submits a POST request to /upload.
@@ -42,6 +44,8 @@ Multer processes the uploaded file.
 File is stored inside the uploads folder.
 A unique filename is generated using the current timestamp.
 User is redirected back to the homepage.
+
+
 Multer Configuration
 Storage Engine
 const storage = multer.diskStorage({
@@ -52,6 +56,8 @@ const storage = multer.diskStorage({
         return cb(null,`${Date.now()}-${file.originalname}`)
     }
 })
+
+
 Upload Middleware
 const upload = multer({ storage })
 Single File Upload
