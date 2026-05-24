@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f6f9;
+      }
+      form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 350px;
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      input[type="file"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+      button {
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="profileImage" />
+      <button type="submit">Upload</button>
+    </form>
+  </body>
+</html>
